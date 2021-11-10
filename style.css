@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-base: 18px;
+  --light-grey: hsl(0, 0%, 98%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+  --border-radius: 0.5rem;
+  --shadow: 0.5rem 0.625rem 1.5rem 0 hsla(233, 11%, 84%, 0.75);
+}
+
+body {
+  font-size: var(--font-base);
+  font-family: "Josefin Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+.todo {
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.todo__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  background-image: url(./images/bg-desktop-light.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.todo__title {
+  width: 50vw;
+  color: var(--light-grey);
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.todo__input {
+  width: 50vw;
+  padding: 1rem;
+  border: none;
+  font-size: var(--font-base);
+  border-radius: var(--border-radius);
+  background-color: var(--light-grey);
+  color: var(--very-dark-grayish-blue);
+}
+
+.todo__input::placeholder {
+  color: var(--dark-grayish-blue);
+}
+
+.todo__list {
+  margin: auto;
+  margin-top: -1.75rem;
+  width: 50vw;
+  border-radius: var(--border-radius);
+  background-color: var(--light-grey);
+  color: var(--very-dark-grayish-blue);
+  box-shadow: var(--shadow);
+}
+
+.todo__listItem {
+  list-style: none;
+  padding: 1.5rem 1rem;
+  font-size: var(--font-base);
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vw;
+  margin: auto;
+  padding: 1rem;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  background-color: var(--light-grey);
+  color: var(--dark-grayish-blue);
+  font-size: 0.8rem;
+}
+
+.nav__filterButton,
+.nav__clearCompletedButton {
+  border: none;
+  background: transparent;
+  color: var(--dark-grayish-blue);
+}
+
+.nav__filterButton {
+  margin-right: 1rem;
+}
+
+.nav__filterButton:last-child {
+  margin-right: 0;
+}
+
+aside {
+  width: 50vw;
+  margin: 2rem auto;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--dark-grayish-blue);
+}
+
+footer {
+  padding: 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
