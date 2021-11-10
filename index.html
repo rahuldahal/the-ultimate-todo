@@ -1,36 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Todo app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="todo">
+     <header class="todo__header">
+      <h1 class="todo__title">Todo</h1>
+      <form class="todo__form">
+        <input class="todo__input" type="text" name="todoItem" placeholder="Create a new todo..." />
+      </form>
+     </header>
+      <ul class="todo__list">
+        <li class="todo__listItem">Sample Item #1</li>
+        <li class="todo__listItem">Sample Item #2</li>
+        <li class="todo__listItem">Sample Item #3</li>
+        <li class="todo__listItem">Sample Item #4</li>
+        <li class="todo__listItem">Sample Item #5</li>
+      </ul>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      <nav class="nav">
+        <span class="nav__itemsLeft">5 items left</span>
+        <span class="nav__filterButtons">
+          <button class="nav__filterButton">All</button>
+          <button class="nav__filterButton">Active</button>
+          <button class="nav__filterButton">Completed</button>
+        </span>
+        <button class="nav__clearCompletedButton">Clear Completed</button>
+      </nav>
 
-  Todo
+      <aside>
+        <p>Drag and drop to reorder list</p>
+      </aside>
 
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </footer>
+    </main>
+  </body>
 </html>
