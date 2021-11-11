@@ -22,6 +22,10 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  cursor: pointer;
+}
+
 .todo {
   align-items: center;
   width: 100vw;
@@ -73,9 +77,17 @@ body {
 
 .todo__listItem {
   list-style: none;
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.todo__listButton {
+  width: 100%;
   padding: 1.5rem 1rem;
   font-size: var(--font-base);
-  border-bottom: 1px solid var(--light-grayish-blue);
+  border: none;
+  background: none;
+  color: var(--very-dark-grayish-blue);
+  text-align: left;
 }
 
 .nav {
