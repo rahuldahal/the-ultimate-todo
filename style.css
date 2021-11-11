@@ -68,7 +68,7 @@ button {
   margin-bottom: 2rem;
 }
 
-.todo__themeToggle {
+.todo__themeToggler {
   width: 2rem;
   height: 2rem;
   background-color: transparent;
@@ -78,7 +78,7 @@ button {
   border: none;
 }
 
-.dark .todo__themeToggle {
+.dark .todo__themeToggler {
   background-image: url("./images/icon-sun.svg");
 }
 
