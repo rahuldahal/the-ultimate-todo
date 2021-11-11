@@ -146,6 +146,10 @@ button {
   margin-right: 0;
 }
 
+.nav__filterButton--active {
+  color: hsl(220, 98%, 61%);
+}
+
 aside {
   width: 50vw;
   margin: 2rem auto;
