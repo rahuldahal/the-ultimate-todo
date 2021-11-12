@@ -106,9 +106,15 @@ button {
 }
 
 .todo__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: auto;
   margin-top: -1.75rem;
   width: 50vw;
+  height: 70vh;
+  overflow-y: auto;
   border-radius: var(--border-radius);
   background-color: var(--light-grey);
   color: var(--very-dark-grayish-blue);
@@ -122,6 +128,7 @@ button {
 }
 
 .todo__listItem {
+  width: 100%;
   list-style: none;
   border-bottom: 1px solid var(--light-grayish-blue);
 }
