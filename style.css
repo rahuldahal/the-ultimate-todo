@@ -109,7 +109,8 @@ button {
   margin: auto;
   margin-top: -1.75rem;
   width: 50vw;
-  border-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
   background-color: var(--light-grey);
   color: var(--very-dark-grayish-blue);
   box-shadow: var(--shadow);
