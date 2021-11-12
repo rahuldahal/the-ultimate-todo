@@ -10,6 +10,8 @@
   // Add todo item
   const todoList = document.querySelector('.todo__list');
   const todoForm = document.querySelector('.todo__form');
+  const todos = [];
+  const localStorageKey = 'TODOS';
 
   todoForm.addEventListener('submit', e=>{
     e.preventDefault();
@@ -32,5 +34,9 @@
     listButton.appendChild(listValue);
     listItem.appendChild(listButton);
     todoList.appendChild(listItem);
+
+    // Save to LocalStorage
+    todos.push(value);
+    localStorage.setItem(localStorageKey, JSON.stringify(todos)); 
   })
 })();
