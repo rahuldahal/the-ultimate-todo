@@ -163,6 +163,11 @@ button {
   border-color: var(--very-dark-grayish-blue);
 }
 
+.todo__listItem--active button {
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+}
+
 .todo__listItem--active .checkIconContainer {
   position: relative;
   background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
