@@ -67,6 +67,7 @@
     listItem.addEventListener("click", (e) => {
       listItem.classList.add("todo__listItem--active");
       removeTodo(listItem.textContent);
+      listItem.children[0].setAttribute("disabled", "true");
     });
   });
 
