@@ -1,4 +1,11 @@
 (function () {
+  // Complete a todo callback
+  function completeTodo(listItem) {
+    listItem.classList.add("todo__listItem--active");
+    removeTodo(listItem.textContent);
+    listItem.children[0].setAttribute("disabled", "true");
+  }
+
   // Add todo function
   const todoList = document.querySelector(".todo__list");
   function addTodo(value) {
@@ -21,6 +28,9 @@
     listButton.appendChild(listValue);
     listItem.appendChild(listButton);
     todoList.appendChild(listItem);
+
+    // attach complete todo event listener
+    listItem.addEventListener("click", () => completeTodo(listItem));
   }
 
   // Save to LocalStorage
@@ -59,16 +69,11 @@
     saveToLocalStorage(value);
   });
 
-  // TODO: add event listener when a new todo item is added.
-  // TODO: because, this will add listener on the first load only.
   // Complete a todo
+
   const listItems = document.querySelectorAll(".todo__listItem");
   listItems.forEach((listItem) => {
-    listItem.addEventListener("click", (e) => {
-      listItem.classList.add("todo__listItem--active");
-      removeTodo(listItem.textContent);
-      listItem.children[0].setAttribute("disabled", "true");
-    });
+    listItem.addEventListener("click", () => completeTodo(listItem));
   });
 
   // Remove todo
