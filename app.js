@@ -62,21 +62,21 @@
   // TODO: add event listener when a new todo item is added.
   // TODO: because, this will add listener on the first load only.
   // Complete a todo
-  const listItems = document.querySelectorAll('.todo__listItem');
-  listItems.forEach(listItem=>{
-    listItem.addEventListener('click', e=>{
-      listItem.classList.add('todo__listItem--active');
+  const listItems = document.querySelectorAll(".todo__listItem");
+  listItems.forEach((listItem) => {
+    listItem.addEventListener("click", (e) => {
+      listItem.classList.add("todo__listItem--active");
       removeTodo(listItem.textContent);
-    })
-  })
+    });
+  });
 
   // Remove todo
-  function removeTodo(value){
+  function removeTodo(value) {
     const todos = JSON.parse(localStorage.getItem(localStorageKey));
-    const completedTodos = JSON.parse(localStorage.getItem('COMPLETED')) || [];
+    const completedTodos = JSON.parse(localStorage.getItem("COMPLETED")) || [];
     completedTodos.push(value);
-    const filteredTodo = todos.filter(todo=>todo!==value);
+    const filteredTodo = todos.filter((todo) => todo !== value);
     localStorage.setItem(localStorageKey, JSON.stringify(filteredTodo));
-    localStorage.setItem('COMPLETED', JSON.stringify(completedTodos));
+    localStorage.setItem("COMPLETED", JSON.stringify(completedTodos));
   }
 })();
